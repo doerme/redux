@@ -1,10 +1,10 @@
 # <a href='http://redux.js.org'><img src='https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67' height='60'></a>
 
-Redux 是个给 JavaScript 应用程式所使用的可预测 state 容器（如果你正在寻找一个 WordPress 框架，请查看 [Redux Framework](https://reduxframework.com/)）。
+Redux 是个给 JavaScript 应用程序所使用的可预测 state 容器（如果你正在寻找一个 WordPress 框架，请查看 [Redux Framework](https://reduxframework.com/)）。
 
 他帮助你编写在不同的环境下执行 (客户端、服务器、原生应用程序)运行效果一样的应用程序，并且易于测试。在这之上，它提供一个很棒的开发体验，例如[可实时不用刷新去调试你所修改的代码](https://github.com/gaearon/redux-devtools)。
 
-你可以使用 Redux 结合 [React](https://facebook.github.io/react/)，或结合其他任何的 view library。
+你可以使用 Redux 集合 [React](https://facebook.github.io/react/)，或结合其他任何的 view library。
 它非常小 (2kB ，包含依赖套件)。
 
 [![build status](https://img.shields.io/travis/reactjs/redux/master.svg?style=flat-square)](https://travis-ci.org/reactjs/redux)
@@ -30,7 +30,7 @@ Redux 是个给 JavaScript 应用程式所使用的可预测 state 容器（如�
 
 ### 开发经验
 
-我在准备我的 React Europe 演讲 [「Hot Reloading 与时间旅行」](https://www.youtube.com/watch?v=xsSnOQynTHs) 的时候撰写了 Redux。我那时的目标是建立一个 state 管理 library，它只有最少的 API，但却拥有完全可预测的行为，所以它可以实现 logging、hot reloading、时间旅行、universal 应用程式、记录和重播，而不需要开发者任何其他的代价。
+我在准备我的 React Europe 演讲 [「Hot Reloading 与时间旅行」](https://www.youtube.com/watch?v=xsSnOQynTHs) 的时候创作了 Redux。我那时的目标是建立一个 state 管理 library，它只有最少的 API，但却拥有完全可预测的行为，所以它可以实现 logging、hot reloading、实时调试、universal 应用、记录和重播，而不需要开发者任何额外的工作。
 
 ### 受到的影响
 
@@ -45,12 +45,12 @@ Redux 从 [Flux](http://facebook.github.io/flux/) 的概念发展而来，不过
 npm install --save redux
 ```
 
-这里假设你是使用 [npm](https://www.npmjs.com/) 作为你的套件管理器。
-若不是的话，你可以[在 npmcdn 取得这些档案](https://npmcdn.com/redux/)并下载它们，或是将套件管理器指向它们。
+这里假设你是使用 [npm](https://www.npmjs.com/) 作为你的组件管理器。
+若不是的话，你可以[在 npmcdn 取得这些文档](https://npmcdn.com/redux/)并下载它们，或是将组件管理器指向它们。
 
-最常见的是人们将 Redux 作为 [CommonJS](http://webpack.github.io/docs/commonjs.html) 模组中的一个 collection 使用。当你在 [Webpack](http://webpack.github.io)、[Browserify](http://browserify.org/) 或 Node 环境中 import `redux` 时就能取得此模组。若你愿意冒风险使用 [Rollup](http://rollupjs.org)，我们也同样支援它。
+最常见的是人们将 Redux 作为 [CommonJS](http://webpack.github.io/docs/commonjs.html) 模块中的一个 collection 使用。当你在 [Webpack](http://webpack.github.io)、[Browserify](http://browserify.org/) 或 Node 环境中 import `redux` 时就能取得此模块。若你愿意冒风险使用 [Rollup](http://rollupjs.org)，我们也同样支持它。
 
-如果你不想使用模组 bundler 也没关系。`redux` npm 套件的 [`dist` 资料夹](https://npmcdn.com/redux/dist/)包含了已编译之 production 与 development 的 [UMD](https://github.com/umdjs/umd) build。你可以不透过 bundler 直接使用它们，也因此它们与许多热门的 JavaScript 模组 loader 及环境相容。举个例子，你可以将一个 UMD build 作为 [`<script>` 标签](https://npmcdn.com/redux/dist/redux.js)放入网页中，或[透过 Bower 进行安装](https://github.com/reactjs/redux/pull/1181#issuecomment-167361975)。UMD build 让 Redux 能够作为 `window.Redux` 全域变数进行使用。
+如果你不想使用模块 bundler 也没关系。`redux` npm 套件的 [`dist` 文件夹](https://npmcdn.com/redux/dist/)包含了已编译之 production 与 development 的 [UMD](https://github.com/umdjs/umd) build。你可以不通过 bundler 直接使用它们，也因此它们与许多热门的 JavaScript 模块 loader 及环境相容。举个例子，你可以将一个 UMD build 作为 [`<script>` 标签](https://npmcdn.com/redux/dist/redux.js)放入网页中，或[通过 Bower 进行安装](https://github.com/reactjs/redux/pull/1181#issuecomment-167361975)。UMD build 让 Redux 能够作为 `window.Redux` 全局变量进行使用。
 
 Redux 的原始码由 ES2015 撰写而成，但是我们预先编译了 CommonJS 及 UMD build 两种 ES5 版本，让它们可以运作于[任何现代的浏览器](http://caniuse.com/#feat=es5)。你不必使用 Babel 或模组 bundler 即可[开始使用 Redux](https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html)。
 
