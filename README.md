@@ -2,7 +2,7 @@
 
 Redux 是个给 JavaScript 应用程式所使用的可预测 state 容器（如果你正在寻找一个 WordPress 框架，请查看 [Redux Framework](https://reduxframework.com/)）。
 
-他帮助你撰写行为一致的应用程式，可以在不同的环境下执行 (客户端、伺服器、原生应用程式)，并且易于测试。在这之上，它提供一个很棒的开发体验，例如[把程式码即时编辑与时间旅行除错器结合](https://github.com/gaearon/redux-devtools)。
+他帮助你编写在不同的环境下执行 (客户端、服务器、原生应用程序)运行效果一样的应用程序，并且易于测试。在这之上，它提供一个很棒的开发体验，例如[可实时不用刷新去调试你所修改的代码](https://github.com/gaearon/redux-devtools)。
 
 你可以使用 Redux 结合 [React](https://facebook.github.io/react/)，或结合其他任何的 view library。
 它非常小 (2kB ，包含依赖套件)。
