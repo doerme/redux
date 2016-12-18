@@ -45,14 +45,14 @@ Redux 从 [Flux](http://facebook.github.io/flux/) 的概念发展而来，不过
 npm install --save redux
 ```
 
-这里假设你是使用 [npm](https://www.npmjs.com/) 作为你的组件管理器。
-若不是的话，你可以[在 npmcdn 取得这些文档](https://npmcdn.com/redux/)并下载它们，或是将组件管理器指向它们。
+这里假设你是使用 [npm](https://www.npmjs.com/) 作为你的包管理器。
+若不是的话，你可以[在 npmcdn 取得这些文档](https://npmcdn.com/redux/)并下载它们，或是将包管理器指向它们。
 
 最常见的是人们将 Redux 作为 [CommonJS](http://webpack.github.io/docs/commonjs.html) 模块中的一个 collection 使用。当你在 [Webpack](http://webpack.github.io)、[Browserify](http://browserify.org/) 或 Node 环境中 import `redux` 时就能取得此模块。若你愿意冒风险使用 [Rollup](http://rollupjs.org)，我们也同样支持它。
 
-如果你不想使用模块 bundler 也没关系。`redux` npm 组件的 [`dist` 文件夹](https://npmcdn.com/redux/dist/)包含了已编译之 production 与 development 的 [UMD](https://github.com/umdjs/umd) build。你可以不通过 bundler 直接使用它们，也因此它们与许多热门的 JavaScript 模块 loader 及环境相容。举个例子，你可以将一个 UMD build 作为 [`<script>` 标签](https://npmcdn.com/redux/dist/redux.js)放入网页中，或[通过 Bower 进行安装](https://github.com/reactjs/redux/pull/1181#issuecomment-167361975)。UMD build 让 Redux 能够作为 `window.Redux` 全局变量进行使用。
+如果你不想使用模块 bundler 也没关系。`redux` npm 包的 [`dist` 文件夹](https://npmcdn.com/redux/dist/)包含了已编译之 production 与 development 的 [UMD](https://github.com/umdjs/umd) build。你可以不通过 bundler 直接使用它们，也因此它们与许多热门的 JavaScript 模块 loader 及环境相容。举个例子，你可以将一个 UMD build 作为 [`<script>` 标签](https://npmcdn.com/redux/dist/redux.js)放入网页中，或[通过 Bower 进行安装](https://github.com/reactjs/redux/pull/1181#issuecomment-167361975)。UMD build 让 Redux 能够作为 `window.Redux` 全局变量进行使用。
 
-Redux 的原始码由 ES2015 编辑而成，但是我们预先编译了 CommonJS 及 UMD build 两种 ES5 版本，让它们可以运行在[任何主流的浏览器](http://caniuse.com/#feat=es5)。你不必使用 Babel 或模块 bundler 即可[开始使用 Redux](https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html)。
+Redux 的源码由 ES2015 编辑而成，但是我们预先编译了 CommonJS 及 UMD build 两种 ES5 版本，让它们可以运行在[任何主流的浏览器](http://caniuse.com/#feat=es5)。你不必使用 Babel 或模块 bundler 即可[开始使用 Redux](https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html)。
 
 #### 补充性组件
 
@@ -148,7 +148,7 @@ store.dispatch({ type: 'DECREMENT' })
 
 #### [观看 30 部免费影片！](https://egghead.io/series/getting-started-with-redux)
 
-如果你喜欢我的课程，请考虑借由[购买订阅](https://egghead.io/pricing)来支持 Egghead。订阅者可以存取我的每一个影片中的范例的原始码，以及无数的其他主题的进阶课程，包括深入 JavaScript、React、Angular、和更多其他的。许多的 [Egghead 讲师](https://egghead.io/instructors) 也是开源 library 的作者，所以购买订阅是一个感谢他们目前所做的事的好方式。
+如果你喜欢我的课程，请考虑借由[购买订阅](https://egghead.io/pricing)来支持 Egghead。订阅者可以存取我的每一个影片中的范例的源码，以及无数的其他主题的进阶课程，包括深入 JavaScript、React、Angular、和更多其他的。许多的 [Egghead 讲师](https://egghead.io/instructors) 也是开源 library 的作者，所以购买订阅是一个感谢他们目前所做的事的好方式。
 
 ### 文件
 
@@ -164,16 +164,16 @@ store.dispatch({ type: 'DECREMENT' })
 
 ### 范例
 
-* [Counter Vanilla](http://redux.js.org/docs/introduction/Examples.html#counter-vanilla) ([原始码](https://github.com/reactjs/redux/tree/master/examples/counter-vanilla))
-* [Counter](http://redux.js.org/docs/introduction/Examples.html#counter) ([原始码](https://github.com/reactjs/redux/tree/master/examples/counter))
-* [Todos](http://redux.js.org/docs/introduction/Examples.html#todos) ([原始码](https://github.com/reactjs/redux/tree/master/examples/todos))
-* [Todos with Undo](http://redux.js.org/docs/introduction/Examples.html#todos-with-undo) ([原始码](https://github.com/reactjs/redux/tree/master/examples/todos-with-undo))
-* [TodoMVC](http://redux.js.org/docs/introduction/Examples.html#todomvc) ([原始码](https://github.com/reactjs/redux/tree/master/examples/todomvc))
-* [Shopping Cart](http://redux.js.org/docs/introduction/Examples.html#shopping-cart) ([原始码](https://github.com/reactjs/redux/tree/master/examples/shopping-cart))
-* [Tree View](http://redux.js.org/docs/introduction/Examples.html#tree-view) ([原始码](https://github.com/reactjs/redux/tree/master/examples/tree-view))
-* [Async](http://redux.js.org/docs/introduction/Examples.html#async) ([原始码](https://github.com/reactjs/redux/tree/master/examples/async))
-* [Universal](http://redux.js.org/docs/introduction/Examples.html#universal) ([原始码](https://github.com/reactjs/redux/tree/master/examples/universal))
-* [Real World](http://redux.js.org/docs/introduction/Examples.html#real-world) ([原始码](https://github.com/reactjs/redux/tree/master/examples/real-world))
+* [Counter Vanilla](http://redux.js.org/docs/introduction/Examples.html#counter-vanilla) ([源码](https://github.com/reactjs/redux/tree/master/examples/counter-vanilla))
+* [Counter](http://redux.js.org/docs/introduction/Examples.html#counter) ([源码](https://github.com/reactjs/redux/tree/master/examples/counter))
+* [Todos](http://redux.js.org/docs/introduction/Examples.html#todos) ([源码](https://github.com/reactjs/redux/tree/master/examples/todos))
+* [Todos with Undo](http://redux.js.org/docs/introduction/Examples.html#todos-with-undo) ([源码](https://github.com/reactjs/redux/tree/master/examples/todos-with-undo))
+* [TodoMVC](http://redux.js.org/docs/introduction/Examples.html#todomvc) ([源码](https://github.com/reactjs/redux/tree/master/examples/todomvc))
+* [Shopping Cart](http://redux.js.org/docs/introduction/Examples.html#shopping-cart) ([源码](https://github.com/reactjs/redux/tree/master/examples/shopping-cart))
+* [Tree View](http://redux.js.org/docs/introduction/Examples.html#tree-view) ([源码](https://github.com/reactjs/redux/tree/master/examples/tree-view))
+* [Async](http://redux.js.org/docs/introduction/Examples.html#async) ([源码](https://github.com/reactjs/redux/tree/master/examples/async))
+* [Universal](http://redux.js.org/docs/introduction/Examples.html#universal) ([源码](https://github.com/reactjs/redux/tree/master/examples/universal))
+* [Real World](http://redux.js.org/docs/introduction/Examples.html#real-world) ([源码](https://github.com/reactjs/redux/tree/master/examples/real-world))
 
 如果你不熟悉 NPM 生态系并在让专案运作起来时遇到了困难，或是你不确定要在哪里贴上上面的代码片段，请查看 [simplest-redux-example](https://github.com/jackielii/simplest-redux-example)，它把 Redux 和 React、Browserify 结合在一起。
 
@@ -203,7 +203,7 @@ store.dispatch({ type: 'DECREMENT' })
 ### 变更日志
 
 这个专案依照 [Semantic Versioning](http://semver.org/)。
-每一个释出版本都会伴随它的迁移说明，被记录在 Github [Releases](https://github.com/reactjs/redux/releases) 页面上。
+每一个发布的版本都会伴随它的迁移说明，被记录在 Github [Releases](https://github.com/reactjs/redux/releases) 页面上。
 
 ### 赞助者
 
