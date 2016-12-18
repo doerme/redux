@@ -5,7 +5,7 @@ Redux 是个给 JavaScript 应用程序所使用的可预测 state 容器（如�
 他帮助你编写在不同的环境下执行 (客户端、服务器、原生应用程序)运行效果一样的应用程序，并且易于测试。在这之上，它提供一个很棒的开发体验，例如[可实时不用刷新去调试你所修改的代码](https://github.com/gaearon/redux-devtools)。
 
 你可以使用 Redux 集合 [React](https://facebook.github.io/react/)，或结合其他任何的 view library。
-它非常小 (2kB ，包含依赖套件)。
+它非常小 (2kB ，包含依赖组件)。
 
 [![build status](https://img.shields.io/travis/reactjs/redux/master.svg?style=flat-square)](https://travis-ci.org/reactjs/redux)
 [![npm version](https://img.shields.io/npm/v/redux.svg?style=flat-square)](https://www.npmjs.com/package/redux)
@@ -50,11 +50,11 @@ npm install --save redux
 
 最常见的是人们将 Redux 作为 [CommonJS](http://webpack.github.io/docs/commonjs.html) 模块中的一个 collection 使用。当你在 [Webpack](http://webpack.github.io)、[Browserify](http://browserify.org/) 或 Node 环境中 import `redux` 时就能取得此模块。若你愿意冒风险使用 [Rollup](http://rollupjs.org)，我们也同样支持它。
 
-如果你不想使用模块 bundler 也没关系。`redux` npm 套件的 [`dist` 文件夹](https://npmcdn.com/redux/dist/)包含了已编译之 production 与 development 的 [UMD](https://github.com/umdjs/umd) build。你可以不通过 bundler 直接使用它们，也因此它们与许多热门的 JavaScript 模块 loader 及环境相容。举个例子，你可以将一个 UMD build 作为 [`<script>` 标签](https://npmcdn.com/redux/dist/redux.js)放入网页中，或[通过 Bower 进行安装](https://github.com/reactjs/redux/pull/1181#issuecomment-167361975)。UMD build 让 Redux 能够作为 `window.Redux` 全局变量进行使用。
+如果你不想使用模块 bundler 也没关系。`redux` npm 组件的 [`dist` 文件夹](https://npmcdn.com/redux/dist/)包含了已编译之 production 与 development 的 [UMD](https://github.com/umdjs/umd) build。你可以不通过 bundler 直接使用它们，也因此它们与许多热门的 JavaScript 模块 loader 及环境相容。举个例子，你可以将一个 UMD build 作为 [`<script>` 标签](https://npmcdn.com/redux/dist/redux.js)放入网页中，或[通过 Bower 进行安装](https://github.com/reactjs/redux/pull/1181#issuecomment-167361975)。UMD build 让 Redux 能够作为 `window.Redux` 全局变量进行使用。
 
-Redux 的原始码由 ES2015 撰写而成，但是我们预先编译了 CommonJS 及 UMD build 两种 ES5 版本，让它们可以运作于[任何现代的浏览器](http://caniuse.com/#feat=es5)。你不必使用 Babel 或模组 bundler 即可[开始使用 Redux](https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html)。
+Redux 的原始码由 ES2015 编辑而成，但是我们预先编译了 CommonJS 及 UMD build 两种 ES5 版本，让它们可以运行在[任何主流的浏览器](http://caniuse.com/#feat=es5)。你不必使用 Babel 或模块 bundler 即可[开始使用 Redux](https://github.com/reactjs/redux/blob/master/examples/counter-vanilla/index.html)。
 
-#### 补充性套件
+#### 补充性组件
 
 大多数情况，你也会需要 [React 的绑定](https://github.com/reactjs/react-redux)和[开发者工具](https://github.com/gaearon/redux-devtools)。
 
@@ -63,13 +63,13 @@ npm install --save react-redux
 npm install --save-dev redux-devtools
 ```
 
-请注意，这些套件不同于 Redux 自身，许多 Redux 生态系中的套件并不提供 UMD build，所以我们建议使用像是 [Webpack](http://webpack.github.io) 或 [Browserify](http://browserify.org/) 的 CommonJS 模组 bundler，以取得最舒适的开发体验。
+请注意，这些组件不同于 Redux 自身，许多 Redux 生态系中的组件并不提供 UMD build，所以我们建议使用像是 [Webpack](http://webpack.github.io) 或 [Browserify](http://browserify.org/) 的 CommonJS 模块 bundler，以取得最舒适的开发体验。
 
-### 程式码片段
+### 代码片段
 
-你的应用程式的完整 state 被以一个 object tree 的形式储存在单一一个的 *store* 里面。
+你的应用程序的完整 state 被以一个 object tree 的形式储存在单一一个的 *store* 里面。
 改变 state tree 的唯一方式是去发送一个 *action*，action 是一个描述发生什么事的物件。
-要指定 actions 要如何转换 state tree 的话，你必须撰写 pure *reducers*。
+要指定 actions 要如何转换 state tree 的话，你必须编写 pure *reducers*。
 
 就这样！
 
@@ -98,7 +98,7 @@ function counter(state = 0, action) {
   }
 }
 
-// 建立一个 Redux store 来掌管你的应用程式的 state。
+// 建立一个 Redux store 来掌管你的应用程序的 state。
 // 它的 API 是 { subscribe, dispatch, getState }。
 let store = createStore(counter)
 
@@ -119,11 +119,11 @@ store.dispatch({ type: 'DECREMENT' })
 // 1
 ```
 
-你必须指定你想要随著被称作 *actions* 的一般物件而发生的变更，而不是直接改变 state。接著你会写一个被称作 *reducer* 的特别 function，来决定每个 action 如何转变整个应用程式的 state。
+你必须指定你想要随著被称作 *actions* 的一般物件而发生的变更，而不是直接改变 state。接著你会写一个被称作 *reducer* 的特别 function，来决定每个 action 如何转变整个应用程序的 state。
 
-如果你以前使用 Flux，那你需要了解一个重要的差异。Redux 没有 Dispatcher 也不支援多个 stores。反而是只有一个唯一的 store 和一个唯一的 root reducing function。当你的应用程式变大时，你会把 root reducer 拆分成比较小的独立 reducers 来在 state tree 的不同部分上操作，而不是添加 stores。 这就像在 React 应用程式中只有一个 root component，但是他是由许多小的 components 组合而成。
+如果你以前使用 Flux，那你需要了解一个重要的差异。Redux 没有 Dispatcher 也不支援多个 stores。反而是只有一个唯一的 store 和一个唯一的 root reducing function。当你的应用程序变大时，你会把 root reducer 拆分成比较小的独立 reducers 来在 state tree 的不同部分上操作，而不是添加 stores。 这就像在 React 应用程序中只有一个 root component，但是他是由许多小的 components 组合而成。
 
-这个架构用于一个计数器应用程式可能看似有点矫枉过正，不过这个模式的美妙之处就在于它如何扩展到大型且模杂的应用程式。它也启用了非常强大的开发工具，因为它可以追踪每一次的变更和造成变更的 action。你可以记录使用者的 sessions 并借由重播每个 action 来重现它们。
+这个架构用于一个计数器应用程序可能看似有点矫枉过正，不过这个模式的美妙之处就在于它如何扩展到大型且模杂的应用程序。它也启用了非常强大的开发工具，因为它可以追踪每一次的变更和造成变更的 action。你可以记录使用者的 sessions 并借由重播每个 action 来重现它们。
 
 ### 从 Redux 的作者学习它
 
@@ -175,7 +175,7 @@ store.dispatch({ type: 'DECREMENT' })
 * [Universal](http://redux.js.org/docs/introduction/Examples.html#universal) ([原始码](https://github.com/reactjs/redux/tree/master/examples/universal))
 * [Real World](http://redux.js.org/docs/introduction/Examples.html#real-world) ([原始码](https://github.com/reactjs/redux/tree/master/examples/real-world))
 
-如果你不熟悉 NPM 生态系并在让专案运作起来时遇到了困难，或是你不确定要在哪里贴上上面的程式码片段，请查看 [simplest-redux-example](https://github.com/jackielii/simplest-redux-example)，它把 Redux 和 React、Browserify 结合在一起。
+如果你不熟悉 NPM 生态系并在让专案运作起来时遇到了困难，或是你不确定要在哪里贴上上面的代码片段，请查看 [simplest-redux-example](https://github.com/jackielii/simplest-redux-example)，它把 Redux 和 React、Browserify 结合在一起。
 
 ### 讨论
 
@@ -194,7 +194,7 @@ store.dispatch({ type: 'DECREMENT' })
 * [Cycle](https://github.com/cyclejs/cycle-core) 展示 function 往往是最好的工具；
 * [React](https://github.com/facebook/react) 实际的创新。
 
-特别感谢 [Jamie Paton](http://jdpaton.github.io) 它移交了 `redux` NPM 套件名称给我们。
+特别感谢 [Jamie Paton](http://jdpaton.github.io) 它移交了 `redux` NPM 组件名称给我们。
 
 ### Logo
 
