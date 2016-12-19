@@ -1,8 +1,8 @@
-# 範例：Reddit API
+# 范例：Reddit API
 
-這是我們在[進階教學](README.md)中建立的抓取 Reddit 標題的範例的完整的原始碼。
+这是我们在[进阶教学](README.md)中建立的抓取 Reddit 标题的范例的完整的原始码。
 
-## 進入點
+## 进入点
 
 #### `index.js`
 
@@ -19,7 +19,7 @@ render(
 )
 ```
 
-## Action Creators 和常數
+## Action Creators 和常数
 
 #### `actions.js`
 
